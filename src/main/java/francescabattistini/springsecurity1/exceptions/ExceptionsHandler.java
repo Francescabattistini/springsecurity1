@@ -29,5 +29,11 @@ public class ExceptionsHandler {
         e.printStackTrace();
         return new ErrorsPayload("Errore generico, risolveremo il prima possibile", LocalDateTime.now());
     }
+    @ExceptionHandler(UnathorizLoginExeption.class)
+    @ResponseStatus(HttpStatus.UNAUTHORIZED) // 401
+    public ErrorsPayload handleUnauthorized(UnathorizLoginExeption e) {
+        return new ErrorsPayload(e.getMessage(), LocalDateTime.now());
+    }
+
 
 }

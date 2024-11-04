@@ -1,6 +1,4 @@
 package francescabattistini.springsecurity1.security;
-
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -23,7 +21,7 @@ public class SecurityConfig{
     // non abbiamo disaple ma session ecc statless senza stato, senza sessione  le disabilitiamo perchè non vogliamo utilizzare le sessioni
     // ma vogliamo utilizzare una sessione basata sul token(sarebbero più dispendiose in termini di performance)
     //poi vogliamo togliere il comportamento "non autorizzato 401
-    httpSecurity.authorizeHttpRequests(http->http.requestMatchers("/**").permitAll())
+    httpSecurity.authorizeHttpRequests(http->http.requestMatchers("/**").permitAll());
 // requestM disabilita la protezione 401 su tutti gli endpoint . (/**) applica questo su tutti gli endpoint e gli dico permetti a tutti.
     return httpSecurity.build();
 

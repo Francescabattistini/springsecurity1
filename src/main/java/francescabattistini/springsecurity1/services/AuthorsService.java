@@ -50,4 +50,8 @@ public class AuthorsService {
         found.setAvatar(body.getAvatar());
         return authorsRepository.save(found);
     }
+    // AGGIUNTO PER LA VERIFICA E TROVARE LA MAIL
+    public Author findByEmail(String email){
+        return this.authorsRepository.findByEmail(email).orElseThrow(()->new NotFoundException("L'utente con email"+email+"non trovato "));
+    }
 }
