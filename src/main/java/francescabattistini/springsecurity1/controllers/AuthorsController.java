@@ -1,7 +1,7 @@
 package francescabattistini.springsecurity1.controllers;
 
-import epicode.u5d8hw.entities.Author;
-import epicode.u5d8hw.services.AuthorsService;
+import francescabattistini.springsecurity1.entities.Author;
+import francescabattistini.springsecurity1.services.AuthorsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;

@@ -1,8 +1,9 @@
 package francescabattistini.springsecurity1.controllers;
 
-import epicode.u5d8hw.entities.Blogpost;
-import epicode.u5d8hw.payloads.NewBlogPostPayload;
-import epicode.u5d8hw.services.BlogsService;
+import francescabattistini.springsecurity1.entities.Blogpost;
+
+import francescabattistini.springsecurity1.payloads.NewBlogPostPayload;
+import francescabattistini.springsecurity1.services.BlogsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

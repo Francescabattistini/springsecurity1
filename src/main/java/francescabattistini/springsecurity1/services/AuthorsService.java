@@ -1,9 +1,9 @@
 package francescabattistini.springsecurity1.services;
 
-import epicode.u5d8hw.entities.Author;
-import epicode.u5d8hw.exceptions.BadRequestException;
-import epicode.u5d8hw.exceptions.NotFoundException;
-import epicode.u5d8hw.repositories.AuthorsRepository;
+import francescabattistini.springsecurity1.entities.Author;
+import francescabattistini.springsecurity1.exceptions.BadRequestException;
+import francescabattistini.springsecurity1.exceptions.NotFoundException;
+import francescabattistini.springsecurity1.repositories.AuthorsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

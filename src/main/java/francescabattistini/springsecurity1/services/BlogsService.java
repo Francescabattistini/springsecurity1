@@ -1,10 +1,10 @@
 package francescabattistini.springsecurity1.services;
 
-import epicode.u5d8hw.entities.Author;
-import epicode.u5d8hw.entities.Blogpost;
-import epicode.u5d8hw.exceptions.NotFoundException;
-import epicode.u5d8hw.payloads.NewBlogPostPayload;
-import epicode.u5d8hw.repositories.BlogsRepository;
+import francescabattistini.springsecurity1.entities.Author;
+import francescabattistini.springsecurity1.entities.Blogpost;
+import francescabattistini.springsecurity1.exceptions.NotFoundException;
+import francescabattistini.springsecurity1.payloads.NewBlogPostPayload;
+import francescabattistini.springsecurity1.repositories.BlogsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
