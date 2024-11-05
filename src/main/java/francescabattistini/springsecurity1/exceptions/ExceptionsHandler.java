@@ -32,7 +32,8 @@ public class ExceptionsHandler {
     @ExceptionHandler(UnathorizLoginExeption.class)
     @ResponseStatus(HttpStatus.UNAUTHORIZED) // 401
     public ErrorsPayload handleUnauthorized(UnathorizLoginExeption e) {
-        return new ErrorsPayload(e.getMessage(), LocalDateTime.now());
+        return new ErrorsPayload(e.getMessage(), LocalDateTime.now()); // dopo di che passo al filtro nell packeg security  con la classe JwtCheckerFilter
+
     }
 
 

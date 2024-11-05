@@ -13,12 +13,12 @@ public class AuthorsController {
     @Autowired
     AuthorsService authorsService;
 
-    // 1. - POST http://localhost:3001/authors (+ req.body)
+ /*   // 1. - POST http://localhost:3001/authors (+ req.body)
     @PostMapping("")
     @ResponseStatus(HttpStatus.CREATED) // <-- 201
     public Author saveAuthor(@RequestBody Author body) throws Exception {
         return authorsService.save(body);
-    }
+    }*/
 
     // 2. - GET http://localhost:3001/authors
     @GetMapping("")

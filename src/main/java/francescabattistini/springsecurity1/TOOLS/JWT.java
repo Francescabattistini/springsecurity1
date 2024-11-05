@@ -2,6 +2,7 @@ package francescabattistini.springsecurity1.TOOLS;
 
 
 import francescabattistini.springsecurity1.entities.Author;
+import francescabattistini.springsecurity1.exceptions.UnathorizLoginExeption;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Value;
@@ -25,9 +26,17 @@ public class JWT {
                 .compact();//assemblerà tutto in una stringa.
 
     };
-    //2 dato un token verificami se è ok
-    private void verifyToken(String accesstoken){
-        Jwts.parser();
+    //2 dato un token verificami se è ok la utilizzeremo nel filtro
+    public void verifyToken(String accesstoken){
+           try {
+            Jwts.parser().verifyWith(Keys.hmacShaKeyFor(secret.getBytes()))// ha bisogno del segreto per fare la verifica
+                    .build().parse(accesstoken);
+            // questo metodo parse ci lancerà diverse eccezioni , se è scaduto, manipolato o sia malformato.
+
+        } catch(Exception ex){
+               throw new UnathorizLoginExeption(" problemi con il token");
+// faccio il try catch  e poi ritorno nel filtro
+        }
     };
 
 }
